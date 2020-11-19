@@ -4,22 +4,25 @@ import { Container, Row } from "react-bootstrap";
 import CommitsList from "./commitsList";
 
 const branchName = "main";
+const repoLink = "https://github.com/zubair-haider/commit-history";
+const mainHeading = "Git commit history of branch ";
 
-const App: FC = () => {
+const CommitsPage: FC = () => {
 	return (
-		<div className="App">
-			<header className="App-header">
+		<>
+			<header className="app-header">
 				<h1>
-					Git commit history of branch <b>{branchName}</b>
+					{mainHeading}
+					<a href={repoLink} target="_blank" rel="noreferrer">
+						{branchName}
+					</a>
 				</h1>
 			</header>
 			<Container>
-				<Row>
-					<CommitsList branchName={branchName} />
-				</Row>
+				<CommitsList branchName={branchName} />
 			</Container>
-		</div>
+		</>
 	);
 };
 
-export default App;
+export default CommitsPage;

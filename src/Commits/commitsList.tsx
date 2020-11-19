@@ -15,25 +15,35 @@ const CommitsComponent: FC<propsType> = ({ branchName }) => {
 		name: "commit-history",
 		qualifiedName: branchName,
 	};
-	const { data, loading, error } = useQuery<CommitsData, CommitsVars>(
-		COMMITS_QUERY,
-		{ variables }
-	);
+	const { data, loading: loadingData, error } = useQuery<
+		CommitsData,
+		CommitsVars
+	>(COMMITS_QUERY, { variables });
 
-	const showMessage = (message: string) => {
-		return <div>{message}</div>;
+	const showMessage = (message: string, type: string) => {
+		return (
+			<div className={`${type} message`}>
+				<span>{message}</span>
+			</div>
+		);
 	};
 
-	if (loading) return <Spinner animation="border" />;
-	if (error) return showMessage(`Error! ${error.message}`);
-	if (!data || !data.repository) return showMessage("No Data");
+	if (loadingData)
+		return (
+			<div className="loader">
+				<Spinner animation="grow" />
+			</div>
+		);
+	if (error) return showMessage(`Error! ${error.message}`, "error");
+	if (!data || !data.repository || !data.repository.ref)
+		return showMessage("No data found", "info");
 	const commits = data.repository.ref.target.history.edges;
 
 	return (
-		<Table striped bordered={true} hover variant="dark" responsive>
+		<Table striped hover variant="dark" responsive>
 			<thead>
 				<tr>
-					<th>Message</th>
+					<th>Commit Message</th>
 					<th>Link</th>
 					<th>Date</th>
 				</tr>
@@ -51,7 +61,7 @@ const CommitsComponent: FC<propsType> = ({ branchName }) => {
 							<td>{message}</td>
 							<td>
 								<a
-									className="App-link"
+									className="app-link"
 									href={commitUrl}
 									target="_blank"
 									rel="noreferrer"
