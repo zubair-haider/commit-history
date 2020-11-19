@@ -1,6 +1,29 @@
-# Getting Started with Create React App
+# Getting Started with Git commit history React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+**Coding guidelines**
+
+Code linting and formatting
+
+1. If Visual Studio Code is used as a code editor, then the following 2 plugins should be installed:
+
+- https://marketplace.visualstudio.com/items?itemName=numso.prettier-standard-vscode
+- https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint
+  Other prettifiers should be disabled.
+
+2. Package Manager
+   The yarn package manager should be used
+
+### `Set up Instructions`
+
+1. Add `REACT_APP_GITHUB_AUTH_TOKEN` key in the envirnment file
+2. Open [https://github.com/settings/tokens] of your github account
+3. Generate new token
+4. Add the token value in the envirnment file for example .env.development.local
+5. your env file should have REACT_APP_GITHUB_AUTH_TOKEN=YOUR_TOKEN
+6. Install packages by running command: yarn
+7. Run project with command: yarn start
 
 ## Available Scripts
 
@@ -38,9 +61,3 @@ If you aren’t satisfied with the build tool and configuration choices, you can
 Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
