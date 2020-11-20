@@ -1,45 +1,45 @@
 body {
-	background-color: #ccc;
+  background-color: white;
 }
 
 .app-header {
-	margin-top: 15px;
+  margin-top: 15px;
 }
 
 .app-header h1 {
-	text-align: center;
+  text-align: center;
 }
 
 .app-link {
-	color: #61dafb;
+  color: #61dafb;
 }
 
 .app-link:hover {
-	color: #61dafb;
+  color: #61dafb;
 }
 
 .loader {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .message {
-	text-align: center;
-	margin-top: 25px;
+  text-align: center;
+  margin-top: 25px;
 }
 
 .message span {
-	padding: 15px;
+  padding: 15px;
 }
 
 .error span {
-	border: 2px solid #dc3545;
-	color: #dc3545;
+  border: 2px solid #dc3545;
+  color: #dc3545;
 }
 
 .info span {
-	border: 2px solid #17a2b8;
-	color: #17a2b8;
+  border: 2px solid #17a2b8;
+  color: #17a2b8;
 }
