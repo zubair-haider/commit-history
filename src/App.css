@@ -10,12 +10,50 @@ body {
   text-align: center;
 }
 
+.container {
+  border: 1px solid black;
+  border-radius: 10px;
+  margin-bottom: 25px;
+}
+
+.single-row {
+  border-bottom: 1px solid black;
+  padding: 10px 0;
+}
+
+.single-row:last-child {
+  border-bottom: 0;
+}
+
+.single-row .app-link {
+  display: block;
+  color: black;
+  font-weight: bold;
+}
+
+.profile-link {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 5px;
+  font-size: 14px;
+  color: black;
+  font-weight: bold;
+}
+
+.commit-since {
+  font-weight: normal;
+}
+
+.last-col {
+  text-align: right;
+}
+
 .app-link {
   color: #61dafb;
 }
 
 .app-link:hover {
-  color: #61dafb;
+  color: rgb(3, 102, 214);
 }
 
 .loader {

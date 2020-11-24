@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import { useQuery } from "@apollo/client";
-import { Spinner } from "react-bootstrap";
+import { Spinner, Row, Col, Button } from "react-bootstrap";
 
 import { COMMITS_QUERY } from "../Graphql/Queries";
 import { CommitsData, CommitsVars } from "../Graphql/types/commitsQueryTypes";
@@ -78,13 +78,35 @@ const CommitsComponent: FC<propsType> = ({ branchName }) => {
         } = commit;
 
         return (
-          <div key={i}>
-            <a href={commitUrl} target="_blank" rel="noreferrer">
-              {message}
-            </a>
-            <img width="20" alt={name} src={avatarUrl} />
-            {` ${name} committed ${timeSince(committedDate)} ago`}
-          </div>
+          <Row key={i} className="single-row">
+            <Col md={9}>
+              <a
+                className="app-link"
+                href={commitUrl}
+                target="_blank"
+                rel="noreferrer"
+              >
+                {message}
+              </a>
+              <img width="20" alt={name} src={avatarUrl} />
+
+              <a
+                className="profile-link"
+                href={commitUrl}
+                target="_blank"
+                rel="noreferrer"
+              >
+                {name}
+              </a>
+              <span className="commit-since profile-link">
+                {" "}
+                {` committed ${timeSince(committedDate)} ago`}
+              </span>
+            </Col>
+            <Col md={3} className="last-col">
+              <Button variant="light">Light</Button>{" "}
+            </Col>
+          </Row>
         );
       })}
     </>
