@@ -1,9 +1,15 @@
+interface author {
+  avatarUrl: string;
+  name: string;
+}
 
-
-interface node {
+export interface node {
   message: string;
   commitUrl: string;
   committedDate: string;
+  abbreviatedOid: string;
+  oid: string;
+  author: author;
 }
 
 interface edge {

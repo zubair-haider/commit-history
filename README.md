@@ -20,10 +20,10 @@ Code linting and formatting
 1. Add `REACT_APP_GITHUB_AUTH_TOKEN` key in the envirnment file
 2. Open [https://github.com/settings/tokens] of your github account
 3. Generate new token
-4. Add the token value in the envirnment file for example .env.development.local
-5. your env file should have REACT_APP_GITHUB_AUTH_TOKEN=YOUR_TOKEN
-6. Install packages by running command: yarn
-7. Run project with command: yarn start
+4. Add the token value in the envirnment file for example `.env`
+5. your env file should have `REACT_APP_GITHUB_AUTH_TOKEN=YOUR_TOKEN`
+6. Install packages by running command `yarn`
+7. Run project with command `yarn start`
 
 ## Available Scripts
 

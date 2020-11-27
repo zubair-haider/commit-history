@@ -1,45 +1,122 @@
 body {
-	background-color: #ccc;
+  background-color: white;
 }
 
 .app-header {
-	margin-top: 15px;
+  margin-top: 15px;
 }
 
 .app-header h1 {
-	text-align: center;
+  text-align: center;
+}
+
+.container {
+  border: 1px solid black;
+  border-radius: 10px;
+  margin-bottom: 25px;
+}
+.date-container ul {
+  padding: 0;
+  margin: 0;
+}
+.date-container ul li {
+  list-style-type: none;
+}
+.date-container ul li:before {
+  content: "•";
+  font-size: 200%;
+  padding-right: 5px;
+  display: inline-block;
+  vertical-align: sub;
+}
+
+.date-container {
+  border: 0;
+  margin-bottom: 0;
+}
+
+.single-row {
+  border-bottom: 1px solid black;
+  padding: 10px 0;
+  align-items: center;
+}
+
+.single-row:hover {
+  background-color: #f6f8fa;
+}
+
+.single-row:last-child {
+  border-bottom: 0;
+  border-radius: 0 0 10px 10px;
+}
+
+.single-row:first-child {
+  border-radius: 10px 10px 0 0;
+}
+
+.single-row .app-link {
+  display: block;
+  color: black;
+  font-weight: bold;
+}
+
+.profile-link {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 5px;
+  font-size: 14px;
+  color: black;
+  font-weight: bold;
+}
+
+.commit-since {
+  font-weight: normal;
+}
+
+.last-col {
+  text-align: right;
 }
 
 .app-link {
-	color: #61dafb;
+  color: #61dafb;
 }
 
 .app-link:hover {
-	color: #61dafb;
+  color: rgb(3, 102, 214);
 }
 
 .loader {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .message {
-	text-align: center;
-	margin-top: 25px;
+  text-align: center;
+  margin-top: 25px;
 }
 
 .message span {
-	padding: 15px;
+  padding: 15px;
 }
 
 .error span {
-	border: 2px solid #dc3545;
-	color: #dc3545;
+  border: 2px solid #dc3545;
+  color: #dc3545;
 }
 
 .info span {
-	border: 2px solid #17a2b8;
-	color: #17a2b8;
+  border: 2px solid #17a2b8;
+  color: #17a2b8;
+}
+.code-btn {
+  border: 1px solid #000;
+  padding: 3px 15px 6px;
+}
+.code-btn:hover {
+  background: #0366d6 !important;
+}
+.code-btn:hover svg {
+  fill: #fff;
 }
